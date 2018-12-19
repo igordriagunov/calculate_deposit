@@ -20,7 +20,7 @@ def calculate_simple_deposit(deposit_sum, percent_in_year, year_quantity):
     return total_sum
 
 
-# print(calculate_simple_deposit(123_459, 15.66, 2))
+print(calculate_simple_deposit(123_459, 15.66, 2))
 
 
 def calculate_hard_deposit_annually_capitalization(deposit_sum, percent_in_year, years_for_deposit):
@@ -36,6 +36,9 @@ def calculate_hard_deposit_annually_capitalization(deposit_sum, percent_in_year,
 
     >>> calculate_hard_deposit_annually_capitalization(100_000, 0, 0) #doctest: +ELLIPSIS
     100000.0...
+
+    >>> calculate_hard_deposit_annually_capitalization(0, 50, 5) #doctest: +ELLIPSIS
+    0.0
     """
     total_sum = deposit_sum * (1 + percent_in_year / 100) ** years_for_deposit
     return total_sum
